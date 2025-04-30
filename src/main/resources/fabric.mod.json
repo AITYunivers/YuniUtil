@@ -1,36 +1,56 @@
 {
   "schemaVersion": 1,
-  "id": "%s",
+  "id": "yuniutil",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "YuniUtil",
+  "description": "A huge utility library made by Yunivers",
   "authors": [
-    "Me!"
+    "Yunivers"
   ],
   "contact": {
-    "homepage": "https://glass-launcher.net/",
-    "sources": "https://github.com/calmilamsy/stationapi-example-mod"
+    "homepage": "https://github.com/AITYunivers/YuniUtil",
+    "sources": "https://github.com/AITYunivers/YuniUtil",
+    "issues": "https://github.com/AITYunivers/YuniUtil/issues"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/%s/icon.png",
+  "license": "MIT",
+  "icon": "assets/yuniutil/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
-      "%s.events.init.InitListener"
+      "io.github.yunivers.yuniutil.events.init.InitBlockEntities",
+      "io.github.yunivers.yuniutil.events.DispenserListener"
     ],
     "stationapi:event_bus_client": [
+      "io.github.yunivers.yuniutil.events.init.InitGUIs"
     ],
     "stationapi:event_bus_server": [
     ]
   },
   "mixins": [
-    "%s.mixins.json"
+    "yuniutil.mixins.json"
   ],
+  "accessWidener": "yuniutil.accesswidener",
 
   "depends": {
+    "fabricloader": "*",
     "minecraft": "1.0.0-beta.7.3"
+  },
+
+  "custom": {
+    "modmenu:api": true,
+    "loom:injected_interfaces": {
+      "net/minecraft/entity/Entity" : [
+        "io/github/yunivers/yuniutil/impl/entity/YuniUtilEntity"
+      ],
+      "net/minecraft/entity/proj  ectile/FireballEntity" : [
+        "io/github/yunivers/yuniutil/impl/entity/projectile/YuniUtilFireballEntity"
+      ],
+      "net/minecraft/item/DoorItem" : [
+        "io/github/yunivers/yuniutil/impl/item/YuniUtilDoorItem"
+      ]
+    }
   }
 }
