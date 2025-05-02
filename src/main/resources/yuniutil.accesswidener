@@ -5,3 +5,4 @@ accessible field net/minecraft/client/Minecraft INSTANCE Lnet/minecraft/client/M
 accessible method net/minecraft/client/render/WorldRenderer renderOutline (Lnet/minecraft/util/math/Box;)V
 accessible field net/minecraft/client/gui/DrawContext zOffset F
 accessible field net/minecraft/client/render/entity/ProjectileEntityRenderer itemTextureId I
+accessible field net/minecraft/block/Block resistance F

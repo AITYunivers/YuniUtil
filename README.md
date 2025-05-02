@@ -6,6 +6,7 @@ A utilities library with all the helpful code I've made across all of my project
 This library includes
 - A reimplementation of chests (Doesn't overwrite vanilla chests)
 - A template for throwable items
+- A template for slabs
 - Some reimplementations of modern entity functions
 - A template for an item with simple tooltips
 - [StationAPI PR #170](https://github.com/ModificationStation/StationAPI/pull/170)
