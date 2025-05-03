@@ -37,21 +37,21 @@ public class TextureYuniUtil
 
     public static class DrawContextHelper
     {
-        public static void drawTexture(DrawContext draw, int x, int y, int width, int height, int u, int v, int texWidth, int texHeight)
+        public static void drawTexture(DrawContext draw, double x, double y, double width, double height, double u, double v, int texWidth, int texHeight)
         {
             drawTexture(draw, x, y, width, height, u, v, width, height, texWidth, texHeight);
         }
 
         @SuppressWarnings("UnnecessaryLocalVariable")
-        public static void drawTexture(DrawContext draw, int x, int y, int width, int height, int u, int v, int scaledWidth, int scaledHeight, int texWidth, int texHeight)
+        public static void drawTexture(DrawContext draw, double x, double y, double width, double height, double u, double v, double scaledWidth, double scaledHeight, int texWidth, int texHeight)
         {
             double scaleU = 1d / texWidth;
             double scaleV = 1d / texHeight;
 
-            int minX = x;
-            int minY = y;
-            int maxX = x + scaledWidth;
-            int maxY = y + scaledHeight;
+            double minX = x;
+            double minY = y;
+            double maxX = x + scaledWidth;
+            double maxY = y + scaledHeight;
 
             double minU = u * scaleU;
             double minV = v * scaleV;

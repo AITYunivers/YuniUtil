@@ -20,7 +20,7 @@ public class NineSlicesYuniUtil
 
     public String[] textures = templateTextures;
 
-    public void DrawNineSlices(int x, int y, int width, int height, DrawContext draw, Minecraft minecraft)
+    public void DrawNineSlices(double x, double y, double width, double height, DrawContext draw, Minecraft minecraft)
     {
         for (int i = 0; i < textures.length; i++)
         {
