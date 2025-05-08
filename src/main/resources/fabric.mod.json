@@ -45,7 +45,7 @@
       "net/minecraft/entity/Entity" : [
         "io/github/yunivers/yuniutil/impl/entity/YuniUtilEntity"
       ],
-      "net/minecraft/entity/proj  ectile/FireballEntity" : [
+      "net/minecraft/entity/projectile/FireballEntity" : [
         "io/github/yunivers/yuniutil/impl/entity/projectile/YuniUtilFireballEntity"
       ],
       "net/minecraft/item/DoorItem" : [
