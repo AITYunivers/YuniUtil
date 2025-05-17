@@ -7,6 +7,8 @@ This library includes
 - A reimplementation of chests (Doesn't overwrite vanilla chests)
 - A template for throwable items
 - A template for slabs
+- A template for stem crops (Melon/Pumpkin seeds)
+- A template for fence gates
 - Some reimplementations of modern entity functions
 - A template for an item with simple tooltips
 - [StationAPI PR #170](https://github.com/ModificationStation/StationAPI/pull/170)
