@@ -13,6 +13,7 @@
   "server": [
   ],
   "client": [
+    "client.render.block.BlockRenderManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
