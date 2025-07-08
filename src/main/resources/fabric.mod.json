@@ -36,7 +36,8 @@
 
   "depends": {
     "fabricloader": "*",
-    "minecraft": "1.0.0-beta.7.3"
+    "minecraft": "1.0.0-beta.7.3",
+    "stationapi": "2.0.0-alpha.4.1"
   },
 
   "custom": {
@@ -50,6 +51,12 @@
       ],
       "net/minecraft/item/DoorItem" : [
         "io/github/yunivers/yuniutil/impl/item/YuniUtilDoorItem"
+      ],
+      "net/minecraft/world/biome/source/BiomeSource" : [
+        "io/github/yunivers/yuniutil/impl/world/biome/source/YuniUtilBiomeSource"
+      ],
+      "net/minecraft/world/World" : [
+        "io/github/yunivers/yuniutil/impl/world/YuniUtilWorld"
       ]
     }
   }

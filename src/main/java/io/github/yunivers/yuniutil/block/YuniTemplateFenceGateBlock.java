@@ -21,6 +21,18 @@ public class YuniTemplateFenceGateBlock extends TemplateBlock
     public static final EnumProperty<Direction> FACING_PROPERTY = EnumProperty.of("facing", Direction.class);
     private final Block baseBlock;
 
+    public YuniTemplateFenceGateBlock(int id, Block baseBlock)
+    {
+        super(id, baseBlock.material);
+        this.baseBlock = baseBlock;
+        setHardness(baseBlock.getHardness());
+        setResistance(baseBlock.resistance / 3.0F);
+
+        setDefaultState(getStateManager().getDefaultState()
+            .with(OPEN_PROPERTY, false)
+            .with(FACING_PROPERTY, Direction.NORTH));
+    }
+
     public YuniTemplateFenceGateBlock(Identifier identifier, Block baseBlock)
     {
         super(identifier, baseBlock.material);

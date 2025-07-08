@@ -6,3 +6,5 @@ accessible method net/minecraft/client/render/WorldRenderer renderOutline (Lnet/
 accessible field net/minecraft/client/gui/DrawContext zOffset F
 accessible field net/minecraft/client/render/entity/ProjectileEntityRenderer itemTextureId I
 accessible field net/minecraft/block/Block resistance F
+accessible field net/minecraft/client/render/block/BlockRenderManager textureOverride I
+accessible field net/minecraft/client/render/block/BlockRenderManager blockView Lnet/minecraft/world/BlockView;

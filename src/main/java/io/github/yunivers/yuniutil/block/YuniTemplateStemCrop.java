@@ -18,6 +18,14 @@ public abstract class YuniTemplateStemCrop extends TemplatePlantBlock
 {
     private final Block baseBlock;
 
+    public YuniTemplateStemCrop(int id, Block block)
+    {
+        super(id, 0);
+        this.baseBlock = block;
+        setTickRandomly(true);
+        setBoundingBox(0.375f, 0.0f, 0.375f, 0.625f, 0.25f, 0.625f);
+    }
+
     public YuniTemplateStemCrop(Identifier identifier, Block block)
     {
         super(identifier, 0);

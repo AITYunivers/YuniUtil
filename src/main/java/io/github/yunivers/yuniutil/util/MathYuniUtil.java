@@ -5,7 +5,10 @@ import net.minecraft.inventory.DoubleInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.modificationstation.stationapi.api.util.math.Direction;
+
+import java.util.Random;
 
 @SuppressWarnings("unused")
 public class MathYuniUtil
@@ -71,5 +74,31 @@ public class MathYuniUtil
         if (chest.world.getBlockId(chest.x, chest.y, chest.z + 1) == chest.getBlock().id)
             return new DoubleInventory("Large chest", (ChestBlockEntity)chest.world.getBlockEntity(chest.x, chest.y, chest.z + 1), chest);
         return chest;
+    }
+
+    public static double dotProduct(Vec3d vec1, Vec3d vec2)
+    {
+        return vec1.x * vec2.x + vec1.y * vec2.y + vec1.z * vec2.z;
+    }
+
+    /// Matches the function added in Beta 1.8
+    public static int randomBounds(Random random, int min, int max)
+    {
+        if (min >= max)
+            return min;
+        return random.nextInt(max - min + 1) + min;
+    }
+
+    /// Matches the function added in Beta 1.8
+    public static long floorToLong(double value)
+    {
+        long l = (long)value;
+        return value < (double)l ? l - 1L : l;
+    }
+
+    /// Matches the function added in Beta 1.8
+    public static int abs(int value)
+    {
+        return value >= 0 ? value : -value;
     }
 }

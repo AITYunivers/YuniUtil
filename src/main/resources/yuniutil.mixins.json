@@ -8,7 +8,9 @@
     "block.SaplingBlockMixin",
     "entity.EntityMixin",
     "entity.projectile.FireballEntityMixin",
-    "item.DoorItemMixin"
+    "item.DoorItemMixin",
+    "world.WorldMixin",
+    "world.biome.source.BiomeSourceMixin"
   ],
   "server": [
   ],

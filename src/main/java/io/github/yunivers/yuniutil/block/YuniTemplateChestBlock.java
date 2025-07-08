@@ -51,6 +51,29 @@ public abstract class YuniTemplateChestBlock extends TemplateBlockWithEntity
     public static int GUI_Rows;
 
     /// Full constructor
+    public YuniTemplateChestBlock(int id, Material material, String name, int invSize, int singleRows, int largeRows)
+    {
+        super(id, material);
+        ignoreMetaUpdates();
+
+        setDefaultState(getStateManager().getDefaultState()
+                .with(FACING_PROPERTY, Direction.NORTH)
+                .with(DOUBLE_SIDE_PROPERTY, EDoubleChestSide.LEFT)
+                .with(IS_DOUBLE_PROPERTY, false));
+
+        this.name = name;
+        this.invSize = invSize;
+        this.singleRows = singleRows;
+        this.largeRows = largeRows;
+    }
+
+    // Minimal Constructor, matches the size of a vanilla chest
+    public YuniTemplateChestBlock(int id, Material material)
+    {
+        this(id, material, "Chest", 27, 3, 3);
+    }
+
+    /// Full constructor
     public YuniTemplateChestBlock(Identifier identifier, Material material, String name, int invSize, int singleRows, int largeRows)
     {
         super(identifier, material);
